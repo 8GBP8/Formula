@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width inicial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Que Macete</title>
+</head>
+<body>
+  <div>
+    <h1>Formula Que Macete<h1>
+      <h1>Q = m.c.t<h1>
+        <h2>Q = Caloria - Unidade cal</h2>
+        <h2>M = Massa - Unidade grama</h2>
+        <h2>C = Coeficiente Térmico - Unidade cal/g°C</h2>
+        <h2>/\T = Variação do Tempo - Unidade seg</h2>
+     <form action="/action_page.php">
+        Q: <input id="q" type="number">
+        = m: <input id="m" type="number">
+        .  c: <input id="c" type="number">
+        .  /\t: <input id="t" type="number">
+        <input type="button" value="Calcular" onclick="Calculando()">
+    </form>
+  </div>
+<script type="text/javascript">
+
+  function Calculando(){
+
+    var q = 0;
+    var m = 0;
+    var c = 0;
+    var t = 0;
+    var conf = 1;
+
+     q = document.getElementById('q').value;
+     m = document.getElementById('m').value;
+     c = document.getElementById('c').value;
+     t = document.getElementById('t').value;
+
+     if(q == 0 && m == 0){ alert("Falta Valores pare se calcular")}
+     else if(q == 0 && c == 0){ alert("Falta Valores pare se calcular")}
+     else if(q == 0 && t == 0){ alert("Falta Valores pare se calcular")}
+     else if(m == 0 && c == 0){ alert("Falta Valores pare se calcular")}
+     else if(m == 0 && t == 0){ alert("Falta Valores pare se calcular")}
+     else if(c == 0 && t == 0){ alert("Falta Valores pare se calcular")}
+     else if(q == 0 && m == 0 && c == 0){ alert("Falta Valores pare se calcular")}
+     else if(q == 0 && c == 0 && t == 0){ alert("Falta Valores pare se calcular")}
+     else if(q == 0 && m == 0 && t == 0){ alert("Falta Valores pare se calcular")}
+     else if(m == 0 && c == 0 && t == 0){ alert("Falta Valores pare se calcular")}
+     else if(q == 0 && m == 0 && c == 0){ alert("Falta Valores pare se calcular")}
+     else {
+       conf = 2;
+     }
+
+    if(conf == 2){
+      if (q == 0){
+        q = m*c*t;
+        alert("O valor de Q é " + q + "cal");
+      }else if(m == 0){
+        m = (c*t);
+        m = q/m;
+        alert("O valor de M é " + m + "g");
+      }else if(c == 0) {
+        c = m*t;
+        c = q/c;
+        alert("O valor de C é " + c + "cal/g°C");
+      }else if(t == 0){
+        t = m*c;
+        t = q/t;
+        alert("O valor de T é "+ t + " s");
+      }else{
+        q = m*c*t;
+        alert("O valor de Q é " + q + "cal");
+      }
+    }else{
+
+    }
+    parent.window.document.location.href = '';
+  }
+
+</script>
+
+  </body>
+</html>

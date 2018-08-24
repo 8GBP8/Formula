@@ -1,0 +1,44 @@
+body{
+  background-color: #FF5F32;
+  text-align: center;
+  font-size:15px;
+}
+
+div {
+    margin-top: 10%;
+    background-color: #47FFCA; 
+}
+
+form{
+  text-align: center;
+}
+
+#q{
+  margin: 20px;
+  padding: 10px;
+}
+
+#m{
+  margin: 20px;
+  padding: 10px;
+}
+
+#c{
+  margin: 20px;
+  padding: 10px;
+}
+
+#t{
+  margin: 20px;
+  padding: 10px;
+}
+
+@media only screen and (max-width:414px){
+  h1{
+	font-size:20px;
+    }
+   form{
+    display:block;
+    font-size:20px;
+	}
+}
